@@ -1,7 +1,7 @@
-Mathematical Expression Evaluator
+###Mathematical Expression Evaluator
 This program evaluates complex mathematical expressions provided by the user. It supports standard arithmetic operators, trigonometric functions (sin, cos), logarithmic functions (log), and the constant pi. The program first converts the expression from infix notation (standard math notation) to postfix notation (which is easier to evaluate) and then evaluates the result.
 
-Features
+#Features
 Infix-to-Postfix Conversion: Converts input expressions to postfix notation, making it easier to handle operator precedence.
 Supported Arithmetic Operations: Addition (+), Subtraction (-), Multiplication (*), Division (/), and Exponentiation (^).
 Supported Functions: Trigonometric (sin, cos), Logarithmic (log), and the constant pi.
@@ -10,10 +10,10 @@ How It Works
 Infix to Postfix Conversion
 In an infix expression, operators appear between operands, e.g., 3 * log(100) + sin^2(90). The program converts this to postfix notation, where operators appear after their operands, e.g., 3 100 log * 90 sin ^ 2 +. This is done using a stack to manage operator precedence and parentheses.
 
-Postfix Evaluation
+#Postfix Evaluation
 Once the expression is converted to postfix, the program evaluates it by processing the postfix expression from left to right. Numbers are pushed onto a stack, and when an operator is encountered, the necessary operands are popped off the stack, the operation is performed, and the result is pushed back onto the stack.
 
-Supported Mathematical Functions
+#Supported Mathematical Functions
 sin(x): Returns the sine of x (in radians).
 cos(x): Returns the cosine of x (in radians).
 log(x): Returns the base-10 logarithm of x.
@@ -21,7 +21,7 @@ pi: The constant π (approximately 3.14159).
 Program Structure
 The program is organized into several key components:
 
-Libraries Used:
+#Libraries Used:
 <iostream>: Handles input and output.
 <stack>: Used for storing operators and intermediate results.
 <string>: For handling the input expression as a string.
