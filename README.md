@@ -26,16 +26,6 @@ pi: The constant π (approximately 3.14159).
 ## Program Structure
 The program is organized into several key components:
 
-#Libraries Used:
-<iostream>: Handles input and output.
-<stack>: Used for storing operators and intermediate results.
-<string>: For handling the input expression as a string.
-<cmath>: Provides mathematical functions (sin, cos, log) and constants like M_PI.
-<unordered_set>: Stores variables in the expression.
-<cctype>: Used for character validation (isdigit).
-<vector>: Stores parts of the expression dynamically during parsing.
-Class: MathSymbols
-This class handles all the logic for:
 
 Precedence Handling: Determines operator precedence (e.g., ^ is evaluated before * or /).
 Infix-to-Postfix Conversion: Converts the input expression to postfix using a stack to manage precedence.
@@ -48,25 +38,25 @@ infixToPostfix(const string& infix, unordered_set<string>& variables): Converts 
 calculate_postfix(const string& postfix): Evaluates the postfix expression using a stack.
 calculate(): Main function that takes user input, validates the expression, converts it to postfix, evaluates, and displays the result.
 Main Function
-cpp
-Copy code
+
+```
 int main() {
     MathSymbols exprProcessor;
     exprProcessor.calculate();
     return 0;
-}
+} 
+```
 The main() function creates an instance of the MathSymbols class and calls calculate() to run the program.
 
-Usage
+#Usage
 Input: You will be prompted to input a mathematical expression in infix notation. Example:
 
-scss
-Copy code
+```
 3 * log(100) + sin^2(90) - cos(log(1000)) + 2 - 3 * 4 + 12
+```
+
 Output: The program will display the postfix conversion of the expression and the final result. Example:
 
-r
-Copy code
 The postfix expression is: 3 100 log * 90 sin ^ 2 + 1000 log cos - 2 + 3 4 * - 12 +
 The result is: <result>
 Final Notes
