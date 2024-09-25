@@ -312,7 +312,26 @@ public:
     // Main function to calculate infix and postfix results
     void calculate() {
         string infix_expo, postfix_expo;
-        cout << "Please enter an expression" << endl;
+
+        cout << "\n+--------------------------------------------------------------+" << endl;
+        cout << "|         Welcome to Infix to Postfix converter!                |" << endl;
+        cout << "+--------------------------------------------------------------+" << endl;
+        cout << "| Please enter a mathematical expression in infix notation.     |" << endl;
+        cout << "|                                                               |" << endl;
+        cout << "| Supported operations: +, -, *, /, ^                           |" << endl;
+        cout << "| Supported functions: sin(x), cos(x), log(x), pi               |" << endl;
+        cout << "|                                                               |" << endl;
+        cout << "| Important guidelines:                                         |" << endl;
+        cout << "| 1. Use parentheses for function arguments, e.g., sin(90).     |" << endl;
+        cout << "| 2. To represent sin^2(90), write (sin(90))^2.                 |" << endl;
+        cout << "| 3. Multiplication must be explicit, e.g., 2 * x instead of 2x.|" << endl;
+        cout << "| 4. Ensure all parentheses are properly closed.                |" << endl;
+        cout << "|                                                               |" << endl;
+        cout << "| Example of a valid expression:                                |" << endl;
+        cout << "| (3 * log(100) + (sin(90))^2 - cos(log(1000)) + 2 - 3 * 4 + 12)|" << endl;
+        cout << "+--------------------------------------------------------------+" << endl;
+        cout << "Please enter your expression below:" << endl;
+
         getline(cin, infix_expo);
 
         if (!isValidExpression(infix_expo)) {
@@ -327,7 +346,7 @@ public:
             return;
         }
 
-        cout << "The postfix expression is: " << postfix_expo << endl;
+        cout << "\nThe postfix expression is: " << postfix_expo << endl;
 
         if (variables.empty()) {
             double infix_result = evaluateInfix(infix_expo);
@@ -339,6 +358,8 @@ public:
             cout << "Note: Expression contains variables. Evaluation is not performed." << endl;
         }
     }
+
+
 };
 
 int main() {
