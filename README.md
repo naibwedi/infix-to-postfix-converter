@@ -1,6 +1,9 @@
 ### Mathematical Expression Evaluator
 This program evaluates complex mathematical expressions provided by the user. It supports standard arithmetic operators, trigonometric functions (sin, cos), logarithmic functions (log), and the constant pi. The program first converts the expression from infix notation (standard math notation) to postfix notation (which is easier to evaluate) and then evaluates the result.
 
+## Design (GUI)
+![image](https://github.com/user-attachments/assets/f3e5dcf0-c919-46e0-be9b-1cdc082ac07f)
+
 ## Features
 Infix-to-Postfix Conversion: Converts input expressions to postfix notation, making it easier to handle operator precedence.
 Supported Arithmetic Operations: Addition (+), Subtraction (-), Multiplication (*), Division (/), and Exponentiation (^).
